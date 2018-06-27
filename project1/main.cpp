@@ -11,6 +11,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <stdio.h>
+#include <algorithm>
 const int MAX_NUM=1000;
 using namespace std;
 int a[MAX_NUM];
@@ -19,7 +20,7 @@ class Poi{
 };
 int main(){
     int total = 0;
-    iftream srcFile("studentdata.numbers",ios::in);
+    freopen("studentdate.number","r",stdin);
     
     return 0;
 }
