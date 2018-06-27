@@ -19,7 +19,6 @@ class Poi{
     int a;
 };
 int main(){
-    int total = 0;
     freopen("studentdate.number","r",stdin);
     
     return 0;
