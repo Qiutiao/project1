@@ -7,9 +7,19 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include <fstream>
+#include <cmath>
+#include <cstdlib>
+#include <stdio.h>
+const int MAX_NUM=1000;
+using namespace std;
+int a[MAX_NUM];
+class Poi{
+    int a;
+};
+int main(){
+    int total = 0;
+    iftream srcFile("studentdata.numbers",ios::in);
+    
     return 0;
 }
