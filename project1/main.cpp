@@ -12,14 +12,24 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <algorithm>
-const int MAX_NUM=1000;
+#include <vector>
+
 using namespace std;
+
+const int MAX_NUM=1000;
+
+string Trim(string& str)
+{
+    str.erase(0,str.find_first_not_of(" \t\r\n"));
+    str.erase(str.find_last_not_of(" \t\r\n") + 1);
+    return str;
+}
+
 int a[MAX_NUM];
 class Poi{
     int a;
 };
 int main(){
     freopen("studentdate.number","r",stdin);
-    
     return 0;
 }
