@@ -17,8 +17,8 @@
 
 using namespace std;
 
-const int MAX_NUM=1000;
-int a[Max_num];
+//const int MAX_NUM=1000;
+//int a[Max_num];
 
 string Trim(string& str)
 {
@@ -78,7 +78,8 @@ class Judges
 
 int main(int argc,const char * argv[])
 {
-    Student s[200];
+    Students s[200];
+    Judges j[200];
     int i=0;
     int n=0;
     FILE *a;
@@ -87,12 +88,12 @@ int main(int argc,const char * argv[])
     string line;
 	if ((a=fopen("/Users/20171105125/Desktop/project1/studentdata.csv","r"))==1)
     {
-        while(fscanf(a,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5))
+        while(fscanf(a,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge1,j[i].judge2,j[i].judge3,j[i].judge4,j[i].judge5))
         {
             while(i>=n)
                 {return 0;}
-            printf("%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5);
-            fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5);
+            printf("%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge1,j[i].judge2,j[i].judge3,j[i].judge4,j[i].judge5);
+            fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge1,j[i].judge2,j[i].judge3,j[i].judge4,j[i].judge5);
             i++;
         }
     }
