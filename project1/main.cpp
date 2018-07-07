@@ -18,6 +18,7 @@
 using namespace std;
 
 const int MAX_NUM=1000;
+int a[Max_num];
 
 string Trim(string& str)
 {
@@ -27,7 +28,16 @@ string Trim(string& str)
     return str;
 }
 
-int a[Max_num];
+class Students
+{
+	public:
+		char studentID[15];
+    	char name[20];
+    	char sex[10];
+    	char birth[30];
+    	char grade[20];
+    	char tel[20];
+};
 
 class Judges
 {
