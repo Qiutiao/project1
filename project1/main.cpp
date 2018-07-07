@@ -38,52 +38,74 @@ class Students
     	char grade[20];
     	char tel[20];
 };
-
 class Judges
 {
-private:
-    int judge[200];
-    int max,min,average;
-public:
-    void information(int judge_temp[])
-	{
+	public:
+		char judge1[10];
+    	char judge2[10];
+    	char judge3[10];
+    	char judge4[10];
+    	char judge5[10];
+};
+
+/*class Judges
+{
+	private:
+    	int max,min,average;
+	public:
+		int judge[200];
+    	void information(int judge_temp[])
+		{
         judge[0]=judge_temp[0];
 		judge[1]=judge_temp[1];
 		judge[2]=judge_temp[2];
 		judge[3]=judge_temp[3];
 		judge[4]=judge_temp[4];
-    }
-    void extremum(){
-        int i;
-        int max=0,min=4;
-        for(i=0;i<5;++i)
-		{
-            if(judge[max]<judge[i])
-				{max=i;}
-            if(judge[min]>judge[i])
-				{min=i;}
-        }
+    	}
+    	void extremum(){
+        	int i;
+        	int max=0,min=4;
+        	for(i=0;i<5;++i)
+			{
+            	if(judge[max]<judge[i])
+					{max=i;}
+            	if(judge[min]>judge[i])
+					{min=i;}
+        	}
         average=(judge[0]+judge[1]+judge[2]+judge[3]+judge[4]-judge[max]-judge[min])/3;
     }
-};
+};*/
 
 int main(int argc,const char * argv[])
 {
-    vector<csvdata> incsv;
-    csvdata intp;
-    FILE *fp;
-    fp=fopen("/Users/S20171105125/Desktop/project1","r");//你自己的文件路径
-    while(1)
+    Student s[200];
+    int i=0;
+    int n=0;
+    FILE *a;
+    FILE *b;
+    ifstream fin("/Users/20171105125/Desktop/project1/studentdata.csv");
+    string line;
+	if ((a=fopen("/Users/20171105125/Desktop/project1/studentdata.csv","r"))==1)
+    {
+        while(fscanf(a,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5))
         {
-            fscanf(fp,"%d,%d,%f,%f",&intp.id,&intp.level,&intp.price,&intp.cost);
-            incsv.push_back(intp);
-            if (feof(fp))break;
+            while(i>=n)
+                {return 0;}
+            printf("%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5);
+            fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5);
+            i++;
         }
-    fclose(fp);
-    or(int i=0;i<incsv.size();i++)
-        {
-            cout<<incsv[i].id<<" "<<incsv[i].level<<" "<<incsv[i].price<<" "<<incsv[i].cost<<endl;
-            }//输出显示每行的数据
-    system("pause");
+    }
+    else
+    {
+        printf("Open object file failure.\n");
+    }
+    b=fopen("/users/20171105125/Desktop/project1/studentdataout.csv","w");
+    
+    while (getline(fin, line))
+    {
+        n++;
+    }
+    
     return 0;
 }
