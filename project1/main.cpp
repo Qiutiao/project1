@@ -27,15 +27,34 @@ string Trim(string& str)
     return str;
 }
 
-int a[MAX_NUM];
+int a[Max_num];
 
-class csvdata
+class Record
 {
-    public:
-        int id;
-        int level;
-        float price;
-        float cost;
+private:
+    int judge[200];
+    int max,min,average;
+public:
+    void information(int judge_temp[])
+	{
+        judge[0]=judge_temp[0];
+		judge[1]=judge_temp[1];
+		judge[2]=judge_temp[2];
+		judge[3]=judge_temp[3];
+		judge[4]=judge_temp[4];
+    }
+    void extremum(){
+        int i;
+        int max=0,min=4;
+        for(i=0;i<5;++i)
+		{
+            if(judge[max]<judge[i])
+				{max=i;}
+            if(judge[min]>judge[i])
+				{min=i;}
+        }
+        average=(judge[0]+judge[1]+judge[2]+judge[3]+judge[4]-judge[max]-judge[min])/3;
+    }
 };
 
 int main(int argc,const char * argv[])
