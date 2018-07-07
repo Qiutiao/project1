@@ -29,7 +29,7 @@ string Trim(string& str)
 
 int a[Max_num];
 
-class Record
+class Judges
 {
 private:
     int judge[200];
