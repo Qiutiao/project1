@@ -113,11 +113,11 @@ int main(int argc,const char * argv[])
         printf("Open object file failure.\n");
     }
     b=fopen("/users/20171105125/Desktop/project1/studentdataout.csv","w");
-    fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge1,j[i].judge2,j[i].judge3,j[i].judge4,j[i].judge5,"average");
+    fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s,%s\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge[0],j[i].judge[1],j[i].judge[2],j[i].judge[3],j[i].judge[4],"average");
     for(i=1;i<n;++n)
 	{
-		printf("%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s,%lf\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge1,j[i].judge2,j[i].judge3,j[i].judge4,j[i].judge5,a[i].average);
-    	fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s,%lf\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge1,j[i].judge2,j[i].judge3,j[i].judge4,j[i].judge5,a[i].average);
+		printf("%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s,%lf\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge[0],j[i].judge[1],j[i].judge[2],j[i].judge[3],j[i].judge[4],a[i].average);
+    	fprintf(b,"%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s ,%s,%lf\n",s[i].studentID,s[i].name,s[i].sex,s[i].birth,s[i].grade,s[i].tel,j[i].judge[0],j[i].judge[1],j[i].judge[2],j[i].judge[3],j[i].judge[4],a[i].average);
 	}
     return 0;
 }
