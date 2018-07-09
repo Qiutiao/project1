@@ -20,7 +20,7 @@ using namespace std;
 //const int MAX_NUM=1000;
 //int a[Max_num];
 
-string Trim(string& str)
+string Delect(string& str)
 {
     //str.find_first_not_of(" \t\r\n"),在字符串str中从索引0开始，返回首次不匹配"\t\r\n"的位置
     str.erase(0,str.find_first_not_of(" \t\r\n"));
