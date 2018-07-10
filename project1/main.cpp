@@ -37,18 +37,18 @@ class Students
     	string birth;
     	string grade;
     	string tel;
-    	Students(string a=NULL,string b=NULL,string c=NULL,string d=NULL,string e=NULL,string f=NULL):
-			studentID(a),name(b),sex(c),birth(d),grade(e),tel(f){}
+    	/*Students(string a=NULL,string b=NULL,string c=NULL,string d=NULL,string e=NULL,string f=NULL):*
+			studentID(a),name(b),sex(c),birth(d),grade(e),tel(f){}*/ 
 };
 class Judges
 {
 	public:
 		string judge[5];
-		Judges(string j=NULL)
+	  /*Judges(string j=NULL)
 		{
-			judge={j};score=s;
+			judge={j};
 		}
-		/*
+		
 		string judge2[200];
     	string judge3[200];
     	string judge4[200];
