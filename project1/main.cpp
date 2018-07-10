@@ -61,7 +61,7 @@ class Average
 	public:
 		double max,min;
 		double average;
-		double judge[5];
+		string judge[5];
     	void information(string judge_temp[])
 		{
         	judge[0]=atof(judge_temp[0]);
